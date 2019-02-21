@@ -7,8 +7,7 @@ namespace Project_1
         static void Main(string[] args)
         {
             new CountrySide().Run();
-            this.TravelVillages();
-
+           
         }
     }
 
@@ -32,13 +31,15 @@ namespace Project_1
             //Wessig.distanceToNextVillage = 14;
             Wessig.west = null;
             Wessig.east = null;
+            this.TravelVillages(Alst);
 
-     
+
+
 
 
         }
 
-       
+
 
 
 
@@ -54,17 +55,29 @@ namespace Project_1
         Village Schvenig;
         public void TravelVillages(Village CurrentVillage)
         {
-            if (CurrentVillage.isAstrildgeHere)
+            try
             {
-                Console.WriteLine("I found Dear Astrildge in ()",CurrentVillage.VillageName);
-                Console.WriteLine("****************Feeling Happy!!!!****************** ");
-                return;
-            }
+                if (CurrentVillage.isAstrildgeHere)
+                {
+                    Console.WriteLine("I found Dear Astrildge in {0}", CurrentVillage.VillageName);
+                    Console.WriteLine("****************Feeling Happy!!!!****************** ");
+                    return;
+                }
+
                 TravelVillages(CurrentVillage.west);
                 TravelVillages(CurrentVillage.east);
-            
 
-        }
+
+
+            }
+            catch(NullReferenceException nre)
+            {
+
+            }
+        } 
+
+
+
 
        
     }
