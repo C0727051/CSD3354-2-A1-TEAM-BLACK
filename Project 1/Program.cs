@@ -64,7 +64,7 @@ namespace Project_1
 
             Hugi.HugiJournal.Add(new JournalEntry(CurrentVillage.VillageName, CurrentVillage.distanceFromPreviousVillage));
 
-            Console.WriteLine("I am finding Astrildge in village  {0}", CurrentVillage.VillageName);
+            Console.WriteLine("I am finding Astrildge in village  {0} and travelled distance {1}", CurrentVillage.VillageName,CurrentVillage.distanceFromPreviousVillage);
             try
             {
 
@@ -119,7 +119,7 @@ namespace Project_1
             try
             {
 
-                using (StreamReader sr = new StreamReader("ann.txt"))
+                using (StreamReader sr = new StreamReader("manveer.txt"))
                 {
                     string line;
 
