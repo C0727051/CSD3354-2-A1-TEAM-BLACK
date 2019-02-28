@@ -71,7 +71,7 @@ namespace Project_1
                 if (CurrentVillage.isAstrildgeHere)
                 {
                     Console.WriteLine("I found Dear Astrildge in {0}", CurrentVillage.VillageName);
-                    Console.WriteLine("**** FEELING HAPPY!!! ******");
+                    Console.WriteLine("**** FEELING HAPPY AND EXCITED!!! ******");
                     Console.WriteLine("Astrilde, I walked {0} miles to find you. Will you marry me?", Hugi.CalculateDistanceWalked());
                     Hugi.FoundAstrilde = true;
                 }
